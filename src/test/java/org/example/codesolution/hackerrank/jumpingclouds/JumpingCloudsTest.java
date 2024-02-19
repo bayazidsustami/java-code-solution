@@ -14,4 +14,12 @@ class JumpingCloudsTest {
 
         Assertions.assertEquals(expected, result);
     }
+
+    @Test
+    void testJumpingCloudTrue1() {
+        var expected = 3;
+        var result = JumpingClouds.jumpingOnClouds(Arrays.asList(0, 0, 0, 0, 1, 0));
+
+        Assertions.assertEquals(expected, result);
+    }
 }
