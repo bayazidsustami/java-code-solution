@@ -1,4 +1,4 @@
-package org.example.codesolution.hackerrank;
+package org.example.codesolution.hackerrank.caesarcode;
 
 public class CaesarCode {
 
