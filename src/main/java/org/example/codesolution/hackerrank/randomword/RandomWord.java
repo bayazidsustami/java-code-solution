@@ -63,15 +63,13 @@ public class RandomWord {
             return false;
         }
 
-        boolean found = searchWord(board, word, index + 1, (row - 1 + rows) % rows, col) // Up
+        return searchWord(board, word, index + 1, (row - 1 + rows) % rows, col) // Up
                 || searchWord(board, word, index + 1, (row + 1) % rows, col) // Down
                 || searchWord(board, word, index + 1, row, (col - 1 + cols) % cols) // Left
                 || searchWord(board, word, index + 1, row, (col + 1) % cols) // Right
                 || searchWord(board, word, index + 1, (row - 1 + rows) % rows, (col - 1 + cols) % cols) // Top left diagonal
                 || searchWord(board, word, index + 1, (row - 1 + rows) % rows, (col + 1) % cols) // Top right diagonal
                 || searchWord(board, word, index + 1, (row + 1) % rows, (col - 1 + cols) % cols) // Bottom left diagonal
-                || searchWord(board, word, index + 1, (row + 1) % rows, (col + 1) % cols); // Bottom right diagonal
-
-        return found;
+                || searchWord(board, word, index + 1, (row + 1) % rows, (col + 1) % cols);
     }
 }
