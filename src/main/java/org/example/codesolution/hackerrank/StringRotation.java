@@ -13,10 +13,26 @@ public class StringRotation {
 
         for (int i = 0; i < putaran.size(); i++) {
             for (int j = 0; j < putaran.get(i); j++) {
-                chars[j] = (char) ((chars[j] - 'a' + 1) % 26 + 'a');
+                if (chars[j] == 'z') {
+                    chars[j] = 'a';
+                } else if (Character.isLowerCase(chars[j])) {
+                    chars[j]++;
+                }
             }
         }
 
+        return new String(chars);
+    }
+
+    public static String shiftCharacters(String input) {
+        char[] chars = input.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == 'z') {
+                chars[i] = 'a';
+            } else if (Character.isLowerCase(chars[i])) {
+                chars[i]++;
+            }
+        }
         return new String(chars);
     }
 

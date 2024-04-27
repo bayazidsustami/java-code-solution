@@ -13,4 +13,11 @@ class StringRotationTest {
         Assertions.assertEquals("dda", result);
     }
 
+    @Test
+    void shiftString() {
+        String input = "abcdefghijklmnopqrstuvwxyz";
+        String shifted = StringRotation.shiftCharacters(input);
+        System.out.println("Original: " + input);
+        System.out.println("Shifted: " + shifted);
+    }
 }
